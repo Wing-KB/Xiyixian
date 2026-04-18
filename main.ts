@@ -77,3 +77,32 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
 })
+input.onSound(DetectedSound.Loud, function () {
+    basic.showLeds(`
+        # . . . #
+        . # . # .
+        . . # . .
+        . # . # .
+        # . . . #
+        `)
+})
+input.onSound(DetectedSound.Quiet, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . #
+        . . . # .
+        # . # . .
+        . # . . .
+        `)
+})
+basic.forever(function () {
+    if (input.logoIsPressed()) {
+        basic.showLeds(`
+            . . # . .
+            . # . # .
+            # . # . #
+            . # . # .
+            . . # . .
+            `)
+    }
+})
