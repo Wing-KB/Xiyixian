@@ -4,7 +4,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         # # # # #
         # # # # #
         # # # # #
-        # . # # #
+        # # # # #
         `)
     basic.pause(500)
     basic.clearScreen()
