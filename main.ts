@@ -1,108 +1,17 @@
-input.onButtonPressed(Button.A, function () {
+radio.onReceivedNumber(function (receivedNumber) {
     basic.showLeds(`
-        . . # . .
-        . # # # .
-        # . # . #
-        . . # . .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . . # # #
-        . . . # #
-        . . # . #
-        . # . . .
-        # . . . .
-        `)
-    basic.showLeds(`
-        . . # . .
-        . . . # .
         # # # # #
-        . . . # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        # . . . .
-        . # . . .
-        . . # . #
-        . . . # #
-        . . # # #
-        `)
-    basic.showLeds(`
-        . . # . .
-        . . # . .
-        # . # . #
-        . # # # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . . . . #
-        . . . # .
-        # . # . .
-        # # . . .
-        # # # . .
-        `)
-    basic.showLeds(`
-        . . # . .
-        . # . . .
         # # # # #
-        . # . . .
-        . . # . .
-        `)
-    basic.showLeds(`
-        # # # . .
-        # # . . .
-        # . # . .
-        . . . # .
-        . . . . #
-        `)
-    basic.showLeds(`
-        # # # . .
-        # # # . .
-        # # # . .
-        . . . # .
-        . . . . #
+        # # # # #
+        # # # # #
+        # . # # #
         `)
     basic.pause(500)
-    basic.showLeds(`
-        . # . # .
-        . . . . .
-        . . . . .
-        # . . . #
-        . # # # .
-        `)
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showIcon(IconNames.Silly)
-})
-input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
 })
-input.onSound(DetectedSound.Loud, function () {
-    basic.showLeds(`
-        # . . . #
-        . # . # .
-        . . # . .
-        . # . # .
-        # . . . #
-        `)
-})
-input.onSound(DetectedSound.Quiet, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . #
-        . . . # .
-        # . # . .
-        . # . . .
-        `)
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(53)
 })
 basic.forever(function () {
-    if (input.logoIsPressed()) {
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . # . #
-            . # . # .
-            . . # . .
-            `)
-    }
+    radio.setGroup(66)
 })
