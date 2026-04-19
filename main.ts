@@ -9,10 +9,10 @@ radio.onReceivedNumber(function (receivedNumber) {
             `)
     } else {
         basic.showLeds(`
-            . . # . .
+            . # . # .
+            # . . . #
             . # # # .
             # # # # #
-            . . # . .
             . . # . .
             `)
     }
@@ -28,7 +28,10 @@ input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Silly)
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showIcon(IconNames.Sword)
+    basic.showIcon(IconNames.Silly)
+    basic.showIcon(IconNames.Silly)
+    basic.showIcon(IconNames.Silly)
+    basic.showIcon(IconNames.Silly)
     basic.showIcon(IconNames.Silly)
 })
 input.onButtonPressed(Button.B, function () {
@@ -60,10 +63,10 @@ basic.showLeds(`
     `)
 basic.showIcon(IconNames.Sword)
 basic.forever(function () {
+    radio.setGroup(66)
+})
+basic.forever(function () {
     if (input.logoIsPressed()) {
         radio.sendNumber(1)
     }
-})
-basic.forever(function () {
-    radio.setGroup(66)
 })
