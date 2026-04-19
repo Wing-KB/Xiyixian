@@ -1,19 +1,19 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         basic.showLeds(`
-            . . # . .
             # # # # #
-            . # # # .
-            . . # . .
-            . . # . .
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
             `)
     } else {
         basic.showLeds(`
+            . . # . .
+            . # # # .
             # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
+            . . # . .
+            . . # . .
             `)
     }
 })
