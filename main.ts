@@ -9,11 +9,25 @@ radio.onReceivedNumber(function (receivedNumber) {
             `)
     } else {
         basic.showLeds(`
-            . # . # .
-            # . . . #
             . # # # .
-            # # # # #
+            # . . . #
+            . . . # .
             . . # . .
+            . . # . .
+            `)
+        basic.showLeds(`
+            # . . . #
+            . . . . .
+            # # # # #
+            . . . # #
+            . . . # #
+            `)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
             `)
     }
 })
